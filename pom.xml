@@ -14,6 +14,7 @@
     <modules>
         <module>spring-security-oauth2-authorization</module>
         <module>spring-boot-oauth2-auto-sample</module>
+        <module>spring-security-oauth2-authorization-mysql</module>
     </modules>
 
     <groupId>cn.echocow</groupId>
@@ -25,6 +26,7 @@
     <properties>
         <java.version>1.8</java.version>
         <spring.boot.version>2.1.6.RELEASE</spring.boot.version>
+        <spring-cloud.version>Greenwich.SR1</spring-cloud.version>
     </properties>
 
     <dependencies>
@@ -53,8 +55,19 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
     </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <build>
         <plugins>
