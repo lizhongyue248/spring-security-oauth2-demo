@@ -1,0 +1,38 @@
+server:
+  port: 8000
+
+application:
+  security:
+    oauth:
+      client[0]:
+        registered-redirect-uri: http://example.com
+        # 客户端 id
+        client-id: client1
+        # 客户端密钥
+        client-secret: $2a$10$wlgcx61faSJ8O5I4nLiovO9T36HBQgh4RhOQAYNORCzvANlInVlw2
+        # 授权范围
+        scope: all
+        # token 有效期
+        access-token-validity-seconds: 6000
+        # 刷新 token 的有效期
+        refresh-token-validity-seconds: 6000
+        # 允许的授权类型
+        grant-type: authorization_code,password,refresh_token
+        # 可以访问的资源 id
+        resource-ids: oauth2
+      client[1]:
+        registered-redirect-uri: http://example.com
+        # 客户端 id
+        client-id: client2
+        # 客户端密钥
+        client-secret: $2a$10$wlgcx61faSJ8O5I4nLiovO9T36HBQgh4RhOQAYNORCzvANlInVlw2
+        # 授权范围
+        scope: all
+        # token 有效期
+        access-token-validity-seconds: 6000
+        # 刷新 token 的有效期
+        refresh-token-validity-seconds: 6000
+        # 允许的授权类型
+        grant-type: authorization_code,password,refresh_token
+        # 可以访问的资源 id
+        resource-ids: oauth2
