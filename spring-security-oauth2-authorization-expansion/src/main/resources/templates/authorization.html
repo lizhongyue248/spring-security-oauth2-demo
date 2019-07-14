@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>确认您的授权</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/vendor/bootstrap/css/bootstrap.min.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/fonts/iconic/css/material-design-iconic-font.min.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/util.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}">
+</head>
+<body>
+<div class="limiter">
+    <div class="container-login100" th:style="'background-image:url(' + @{/images/bg-01.jpg} + ');'">
+        <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+            <!--/*@thymesVar id="action" type="java.lang.String"*/-->
+            <form class="login100-form validate-form" action="/oauth/authorize" method="post">
+                <span class="login100-form-title p-b-49"
+                      th:text="${clientId} + ' 请求授权，该应用将访问您的资源信息。将会取得如下权限：' + ${scopeName}">
+                    请求授权
+                </span>
+                <div class="wrap-input100 validate-input m-b-23">
+                    <input type="hidden" name="user_oauth_approval" value="true">
+                    <div style="display: none" th:each="scope : ${scopes}">
+                        <input type="hidden" th:name="'scope.' + ${scope}" value="true">
+                    </div>
+                    <input type="hidden" name="_csrf" th:value="${_csrf.token}"/>
+                </div>
+
+                <div class="container-login100-form-btn">
+                    <div class="wrap-login100-form-btn">
+                        <div class="login100-form-bgbtn"></div>
+                        <button type="submit" class="login100-form-btn">确认授权</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<script th:src="@{/vendor/jquery/jquery-3.2.1.min.js}"></script>
+<script th:src="@{/js/main.js}"></script>
+</body>
+
+</html>

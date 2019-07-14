@@ -15,6 +15,9 @@
         <module>spring-security-oauth2-authorization</module>
         <module>spring-boot-oauth2-auto-sample</module>
         <module>spring-security-oauth2-authorization-mysql</module>
+        <module>spring-security-oauth2-authorization-redis</module>
+        <module>spring-security-oauth2-authorization-jwt</module>
+        <module>spring-security-oauth2-authorization-expansion</module>
     </modules>
 
     <groupId>cn.echocow</groupId>
