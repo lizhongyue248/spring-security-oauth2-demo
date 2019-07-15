@@ -64,7 +64,7 @@ public class Oauth2AuthorizationServerConfig extends AuthorizationServerConfigur
                     .refreshTokenValiditySeconds(Math.toIntExact(Duration.ofHours(1).getSeconds()))
                     .redirectUris("http://example.com")
                 .and()
-                .withClient("oauth2")
+                .withClient("test")
                     .secret("$2a$10$wlgcx61faSJ8O5I4nLiovO9T36HBQgh4RhOQAYNORCzvANlInVlw2")
                     .resourceIds("oauth2")
                     .authorizedGrantTypes("password", "authorization_code", "refresh_token")
