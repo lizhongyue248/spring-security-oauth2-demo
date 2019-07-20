@@ -11,6 +11,7 @@ import org.springframework.security.oauth2.config.annotation.configurers.ClientD
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
+import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
 import org.springframework.security.oauth2.provider.client.BaseClientDetails;
 
 import java.time.Duration;
@@ -113,4 +114,18 @@ public class Oauth2AuthorizationServerConfig extends AuthorizationServerConfigur
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) {
         endpoints.authenticationManager(this.authenticationManager);
     }
+
+    /**
+     * 资源服务器所需，后面会讲
+     * 具体作用见本系列的第二篇文章授权服务器最后一部分
+     * 具体原因见本系列的第三篇文章资源服务器
+     *
+     * @param security security
+     */
+    @Override
+    public void configure(AuthorizationServerSecurityConfigurer security) {
+        security
+                .checkTokenAccess("isAuthenticated()");
+    }
+
 }
