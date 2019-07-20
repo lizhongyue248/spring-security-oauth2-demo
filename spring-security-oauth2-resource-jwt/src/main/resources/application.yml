@@ -1,0 +1,27 @@
+server:
+  port: 9000
+
+security:
+  oauth2:
+    resource:
+      token-info-uri: http://localhost:8000/oauth/check_token
+      id: oauth2
+      jwt:
+        key-uri: http://localhost:8000/oauth/token_key
+        # 如果没有配置这项，会自动联网获取
+        key-value: |
+          -----BEGIN PUBLIC KEY-----
+          MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAiNMiywFLjao8P86kkhwu
+          49Ycys35RRZaKgqZ6JNtbgFq5dCA2kBtdArhm2GS2zplOyPGDlog3r9Ka2jA33Pf
+          A9vl60zq1oI1AAAd8CLnyTvIekCnpwaGeBfYFv++LwhWPPT617XVhmF46c25F29t
+          tMnGuzHzqKprysgdfBaIXUKZkMeVudGSLPgR0RjZvcM8MMs1cZ1rAISRgIT/D1RL
+          Do/HhQkKOvhW2IrQgrqrgu+R/V+7AqS6dz/YAdroYpcBoXKSai+HtZ6yTDxrWdxh
+          pbaTCvW2M/IObYVZaHpdOYNTufOzR6+w4SXagT++OopWEQ8w1vLKQzHk+uTrBfzQ
+          kQIDAQAB
+          -----END PUBLIC KEY-----
+    client:
+      access-token-uri: http://localhost:8000/oauth/token
+      client-id: oauth2
+      client-secret: oauth2
+      grant-type: authorization_code,password,refresh_token
+      scope: all

@@ -19,6 +19,7 @@
         <module>spring-security-oauth2-authorization-jwt</module>
         <module>spring-security-oauth2-authorization-expansion</module>
         <module>spring-security-oauth2-resource</module>
+        <module>spring-security-oauth2-resource-jwt</module>
     </modules>
 
     <groupId>cn.echocow</groupId>
