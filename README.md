@@ -16,7 +16,7 @@
 1. [较为详细的学习 oauth2 的四种模式其中的两种授权模式](https://echocow.cn/articles/2019/07/14/1563082088646.html)
 2. [spring boot oauth2 自动配置实现](https://echocow.cn/articles/2019/07/14/1563082247386.html)
 3. [spring security oauth2 授权服务器配置](https://echocow.cn/articles/2019/07/14/1563096109754.html)
-4. spring security oauth2 资源服务器配置
+4. [spring security oauth2 资源服务器配置](https://echocow.cn/articles/2019/07/20/1563611848587.html)
 5. spring security oauth2 自定义授权模式（手机、邮箱等）
 6. spring security oauth2 踩坑记录
 
