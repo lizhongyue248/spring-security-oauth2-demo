@@ -17,7 +17,7 @@
 2. [spring boot oauth2 自动配置实现](https://echocow.cn/articles/2019/07/14/1563082247386.html)
 3. [spring security oauth2 授权服务器配置](https://echocow.cn/articles/2019/07/14/1563096109754.html)
 4. [spring security oauth2 资源服务器配置](https://echocow.cn/articles/2019/07/20/1563611848587.html)
-5. spring security oauth2 自定义授权模式（手机、邮箱等）
+5. [spring security oauth2 自定义授权模式（手机、邮箱等）](https://echocow.cn/articles/2019/07/30/1564498598952.html)
 6. spring security oauth2 踩坑记录
 
 原本打算全部写完一起发的，但是才写到第三点，就已经上万字了，所以还是觉得分系列发吧～
