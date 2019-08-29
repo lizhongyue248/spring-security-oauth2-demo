@@ -113,6 +113,9 @@ public class Oauth2AuthorizationServerConfig extends AuthorizationServerConfigur
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) {
         endpoints.authenticationManager(this.authenticationManager);
+        // 自定义 请求 路径
+        // endpoints.pathMapping("/oauth/token", "/my/token")
+        //        .pathMapping("", "");
     }
 
     /**
