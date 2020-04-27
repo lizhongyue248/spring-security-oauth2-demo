@@ -1,6 +1,6 @@
 # Spring Security Oauth2 从零到一完整实践
 
-![](https://img.hacpai.com/bing/20180817.jpg?imageView2/1/w/960/h/540/interlace/1/q/100) 
+> **注意：此项目不再维护，文章内容仅适用于 Spring Boot 2.2.x / Spirng Security 5.2.x 及以下版本。Spring Security OAuth 模块的资源服务器与客户端已迁移到 Spring Security 模块。以前的配置方式已不再适用，而授权服务器于 2020 年 4 月 15 日 Spring 项目组完全重写，目前正在孵化项目中**。
 
 很久没有写一篇长文章了，自己说起来其实年初换成 solo 到现在，写的让自己满意的技术性文章也就只有 [spring boot restful API 从零到一完整实践](https://echocow.cn/articles/2019/01/05/1546684795983.html) 这篇了，其他的其实都是只属于自己比较容易理解的笔记和记录而已。想想年中了，还是需要写上这么一篇实践性文章的。这段时间比较折磨自己的，莫过于就是 [spirng security oauth2](https://spring.io/projects/spring-security-oauth) 了，自己折腾了很久，也算是学会了一些吧，按照原来的方式，写了一篇文章。前面也写过 [spring boot security oauth2  构建简单安全的 restful api](https://echocow.cn/articles/2019/01/22/1548148450889.html)，但是太过于基础并且那时候自己也有很多不懂，现在实践了很多，有了更加深入的了解，记录一下顺便分享给大家。
 
